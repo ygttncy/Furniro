@@ -1,0 +1,37 @@
+@import "../../../styles/abstracts/colors";
+
+.pageNumbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pageNumbersButton {
+  padding: 15px 30px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    border-color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+
+  &.currentPage {
+    background-color: $clr-orange;
+    color: $text-third;
+  }
+
+  &.normalPage {
+    background-color: $clr-light-cream;
+    color: $text-primary;
+
+    &:hover {
+      background-color: $clr-gold;
+      color: $text-third;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

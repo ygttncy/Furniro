@@ -1,0 +1,81 @@
+@import "../../styles/styles.scss";
+.dropdown-wrapper {
+  .modal-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    font-family: $fnt-poppins;
+    gap: clamp(10px, 2vw, 20px);
+    .modal-products-container {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(10px, 3vw, 25px);
+      height: 20vw;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      p {
+        opacity: 50%;
+        font-size: clamp(8px, 2vw, 16px);
+      }
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .modal-title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+        font-size: clamp(16px, 3.5vw, 24px);
+      }
+      .close-img-box {
+        width: 28px;
+        height: 28px;
+        .close-img {
+          width: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .modal-footer {
+      bottom: 0;
+      padding-bottom: 25px;
+      .subtotal-container {
+        font-family: $fnt-poppins;
+        .price {
+          color: $clr-gold;
+        }
+      }
+      .line-box {
+        max-width: 367px;
+        padding: 10px 0;
+        .line-img {
+          width: 100%;
+        }
+      }
+      .subtotal-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: clamp(12px, 2vw, 16px);
+      }
+      .modal-btns {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        .modal-btn {
+          border: 1px solid #3a3a3a;
+          border-radius: 50px;
+          padding: 6px 30px;
+          font-family: "Poppins", sans-serif;
+          font-size: 12px;
+          line-height: 18px;
+          color: #3a3a3a;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

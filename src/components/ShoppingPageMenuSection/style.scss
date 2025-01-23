@@ -1,0 +1,52 @@
+.filter-header {
+  width: 1440px;
+  height: 100px;
+  position: relative;
+  top: 317px;
+  gap: 0px;
+  opacity: 0; // You might want to change opacity to 1 to make it visible
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center; // Center the items vertically
+
+  .filter-header-left {
+    display: flex;
+    align-items: center; // Align items vertically within this section
+    gap: 10px; // Adjust the gap between icon, text, and divider
+
+    .filter-icon {
+      font-size: 24px; // Adjust icon size if necessary
+    }
+
+    .filter-text {
+      font-weight: bold;
+    }
+
+    .divider {
+      margin: 0 8px; // Add space around the divider
+      color: #ccc; // Adjust divider color
+    }
+
+    .results-text {
+      color: #666; // Adjust text color
+    }
+  }
+
+  .filter-header-right {
+    display: flex;
+    align-items: center; // Align the "Sort by" label and select dropdown
+
+    label {
+      font-size: 14px;
+      margin-right: 8px; // Space between the label and select
+    }
+
+    select {
+      padding: 5px 10px; // Adjust padding for the dropdown
+      border: 1px solid #ccc; // Border styling
+      border-radius: 4px; // Rounded corners
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@import "../../styles/abstracts/colors";
+@import "../../styles/abstracts/mixins";
+@import "../../styles/styles.scss";
+
+.topCategories {
+  text-align: center;
+  padding: 2rem;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $text-primary;
+    margin-bottom: 1rem;
+    font-family: $fnt-poppins;
+
+    @include respond-to(small) {
+      font-size: 1.5rem;
+    }
+
+    @include respond-to(medium) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: $text-secondary;
+    margin-bottom: 2rem;
+    font-family: $fnt-poppins;
+
+    @include respond-to(small) {
+      font-size: 0.9rem;
+    }
+
+    @include respond-to(medium) {
+      font-size: 1rem;
+    }
+  }
+
+  .grid {
+    @include flex-center(row, center, flex-start);
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    @include respond-to(medium) {
+      gap: 1rem;
+    }
+  }
+
+  .card {
+    background-color: $clr-light-cream;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+
+      @include respond-to(small) {
+        border-radius: 4px;
+      }
+    }
+
+    .categoryTitle {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $text-primary;
+      text-align: center;
+      font-family: $fnt-poppins;
+
+      @include respond-to(small) {
+        font-size: 1rem;
+      }
+
+      @include respond-to(medium) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

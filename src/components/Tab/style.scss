@@ -1,0 +1,100 @@
+@import "../../styles/styles.scss";
+
+.tab-container {
+  max-width: 1214px;
+  gap: clamp(12px, 2.5vw, 40px);
+  padding: 30px 0px;
+  font-family: $fnt-poppins;
+  margin: 0 auto;
+  color: $text-primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .tab__switches {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    line-height: 36px;
+    font-size: clamp($fnt-size-xxs, 2.6vw, $fnt-size-lg);
+    width: 90%;
+    cursor: pointer;
+
+    h3 {
+      color: #acacac;
+      font-weight: 400;
+    }
+    .toggle-color {
+      color: black;
+    }
+  }
+  .tab__extras {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 2.5vw, 40px);
+    color: $text-secondary;
+    font-size: clamp($fnt-size-xxs, 1.6vw, $fnt-size-lg);
+    line-height: clamp(24px, 2vw, 36px);
+    font-weight: 300;
+
+    .table-container {
+      max-width: 100%;
+      .responsive-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        table-layout: auto;
+        tr {
+          border: 1px solid #ddd;
+          text-align: center;
+        }
+        td {
+          width: 50%;
+        }
+        th {
+          text-align: center;
+          font-weight: 500;
+
+          width: 50%;
+          border: 1px solid #ddd;
+        }
+      }
+    }
+    .tab__review {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(12px, 2.5vw, 40px);
+      border: 5px solid $clr-cream;
+      padding: 10px;
+      border-radius: 10px;
+      .reviews__meta {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  .tab__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    .img__wrapper {
+      border-radius: 30px;
+
+      flex: 1 1 300px;
+      max-width: 70%;
+      img {
+        width: 100%;
+        border-radius: 10px;
+
+        height: clamp(200px, 25vw, 400px);
+        object-fit: cover;
+      }
+    }
+  }
+}

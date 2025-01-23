@@ -1,0 +1,103 @@
+@import "../../styles/styles.scss";
+
+footer {
+  width: 100%;
+  min-height: 430px;
+  padding: 30px 0px;
+  gap: 20px;
+  background-color: $text-primary;
+  font-family: $fnt-poppins;
+  font-size: $fnt-size-s;
+  color: white;
+  font-weight: 700;
+  @include flex-center(column, space-between, center);
+  @include center;
+  h2 {
+    font-size: $fnt-size-xlg;
+  }
+  @include respond-to(medium) {
+    font-size: $fnt-size-xs;
+  }
+
+  section {
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 30px;
+    text-align: start;
+    line-height: 18px;
+    @include flex-center(row, space-between, start);
+    .ftr__location {
+      word-wrap: wrap;
+    }
+    div {
+      max-width: 300px;
+      font-weight: 400;
+
+      gap: 20px;
+      @include flex-center(column, center, start);
+      @include respond-to(medium) {
+        gap: 10px;
+      }
+      @include respond-to(large) {
+        width: 300px;
+      }
+
+      h4 {
+        font-size: $fnt-size-m;
+        border-bottom: 1px solid $clr-coral;
+        padding-bottom: 4px;
+        font-weight: 700;
+        display: inline-block;
+        @include respond-to(medium) {
+          font-size: $fnt-size-s;
+        }
+      }
+      li {
+        margin-bottom: 15px;
+        @include respond-to(medium) {
+          margin-bottom: 8px;
+        }
+      }
+      form {
+        gap: 30px;
+        @include flex-center(column, center, start);
+        @include respond-to(large) {
+          flex-direction: column;
+        }
+        button {
+          color: white;
+          cursor: pointer;
+        }
+        input {
+          @include respond-to(medium) {
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+  .ftr__bttm-info {
+    width: 85%;
+    height: 34px;
+    border-top: 1px solid white;
+    font-weight: 400;
+    @include flex-center(row, center, end);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  footer section div {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer section div {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 420px) {
+  footer section div {
+    width: 135px;
+  }
+}

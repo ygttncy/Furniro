@@ -1,0 +1,57 @@
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin center {
+  margin: 0 auto;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 400px) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: 899px) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin scrollbars {
+  &::-webkit-scrollbar {
+    border-radius: 21px;
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+    border-radius: 21px;
+    border: 2px solid #d1d1d1;
+    box-sizing: border-box;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 21px;
+    background: #d1d1d1;
+  }
+
+  & {
+    scrollbar-face-color: #f1f1f1;
+    scrollbar-track-color: #d1d1d1;
+  }
+}

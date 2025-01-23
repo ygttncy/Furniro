@@ -1,0 +1,39 @@
+@import "../../styles/abstracts/variables";
+
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  background-color: $clr-cream;
+  margin: 10px 0px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    .feature-card__title {
+      font-size: 1rem;
+    }
+
+    .feature-card__description {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    padding: 0.5rem;
+    gap: 0.5rem;
+
+    .feature-card__title {
+      font-size: 0.5rem;
+    }
+
+    .feature-card__description {
+      font-size: 0.5rem;
+    }
+    .feature-card {
+      margin: 0.1rem;
+    }
+  }
+}

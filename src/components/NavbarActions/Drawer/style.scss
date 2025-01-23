@@ -1,0 +1,68 @@
+@import "../../../styles/styles.scss";
+
+.drawer-container {
+  font-size: 12px;
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  color: black;
+  top: 100%;
+  width: 200px;
+  -webkit-box-shadow: 3px 0px 4px 0px rgba(222, 222, 219, 0.51);
+  -moz-box-shadow: 3px 0px 4px 0px rgba(222, 222, 219, 0.51);
+  box-shadow: 3px 0px 4px 0px rgba(222, 222, 219, 0.51);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .drawer-content {
+    width: 100%;
+    height: 100%;
+    .notification-container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+      position: relative;
+      width: 100%;
+      background: #fff;
+      border-radius: 10px;
+      margin: 0 auto;
+      .notification {
+        -webkit-box-shadow: 3px 0px 4px 0px rgba(233, 194, 53, 0.51);
+        -moz-box-shadow: 3px 0px 4px 0px rgba(233, 194, 53, 0.51);
+        box-shadow: 3px 0px 4px 0px rgba(233, 194, 53, 0.51);
+        border-top: 1px solid grey;
+        border-left: 1px solid grey;
+        color: rgb(65, 62, 62);
+
+        border-radius: 10px;
+        p {
+          padding: 5px;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          :nth-child(1) {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+          }
+          :nth-child(3) {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+          }
+          li {
+            padding: 10px;
+            border: 1 solid grey;
+
+            border-bottom: 1px solid grey;
+            cursor: pointer;
+            &:hover {
+              background-color: rgba(211, 173, 51, 0.674);
+            }
+          }
+        }
+      }
+    }
+  }
+}

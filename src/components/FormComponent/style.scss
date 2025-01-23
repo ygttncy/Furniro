@@ -1,0 +1,627 @@
+.form-container {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+
+  .divider {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 15px 0;
+  }
+
+  .signup-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .additional-info-btn {
+      white-space: nowrap;
+      width: 214px;
+      height: 74px;
+      padding: 2px 7px;
+      border-radius: 15px;
+      border: 1px solid #7c838a;
+      opacity: 0.8;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      gap: 3px;
+
+      &:hover {
+        opacity: 1;
+        border-color: #b88e2f;
+        transform: translateY(-2px);
+      }
+
+      .icon {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  .billing-btn {
+    margin-top: 44px;
+    display: inline-block;
+    width: 250px;
+    height: 74px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    color: #acacac;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid #797979;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      border: 1px solid #b88e2f;
+      transform: translateY(-2px);
+    }
+  }
+
+  .login-info {
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+    .login-link {
+      color: #b88e2f;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .create-account-btn,
+  .submit-button {
+    width: 100%;
+    max-width: 269px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.8;
+    background-color: #b88e2f;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  
+    &.disabled {
+      background-color: #c0c0c0;
+      color: #666;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  
+    &:hover:not(.disabled) {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+  }
+  
+  .submit-button {
+    margin-top: 30px;
+    margin-left: 0; 
+    
+  }
+  
+  .input-field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+
+    label {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #333;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 18px 20px;
+      border-radius: 15px;
+      border: 1px solid #acacac;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+
+      &::placeholder {
+        color: #acacac;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: #b88e2f;
+      }
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    select {
+      color: #333;
+      width: 100%;
+      padding: 18px 20px;
+      border-radius: 15px;
+      border: 1px solid #acacac;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      background-color: white;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #b88e2f;
+      }
+
+      option:disabled {
+        color: #acacac;
+      }
+    }
+  }
+  .input-about {
+    border: 1px solid #acacac;
+    height: 220px;
+    border-radius: 15px;
+    padding: 10px;
+    resize: vertical;
+    text-align: left;
+    vertical-align: top;
+    resize: none;
+  }
+
+  .input-about::placeholder {
+    text-align: left;
+    color: #aaa;
+  }
+
+  .billing-details-container {
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 44px;
+    display: flex;
+    flex-direction: column;
+
+    .name-fields {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+
+      .input-field {
+        width: 100%;
+        height: 60px;
+      }
+    }
+
+    .input-field {
+      width: 100%;
+      height: 60px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 15px;
+
+    .input-field,
+    .input-about {
+      font-size: 15px;
+      padding: 15px;
+    }
+
+    .input-about {
+      height: 180px;
+    }
+
+    .signup-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .create-account-btn,
+    .additional-info-btn {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 10px;
+
+    label {
+      font-size: 14px;
+    }
+
+    .input-field,
+    .input-about {
+      font-size: 14px;
+      padding: 12px;
+    }
+
+    .input-about {
+      height: 150px;
+    }
+
+    .signup-buttons {
+      gap: 5px;
+    }
+
+    .create-account-btn {
+      width: 100%;
+    }
+  }
+}
+.form-container {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+
+  .divider {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 15px 0;
+    position: relative;
+  }
+
+  .signup-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+
+    .additional-info-btn {
+      white-space: nowrap;
+      width: 214px;
+      height: 54px;
+      padding: 2px 7px;
+      border-radius: 15px;
+      border: 1px solid #7c838a;
+      opacity: 0.8;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      gap: 3px;
+
+      .icon {
+        width: 50px;
+        height: 50px;
+      }
+
+      &:hover {
+        opacity: 1;
+        border-color: #b88e2f;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .lgn-btn {
+    margin-top: 20px;
+    width: 164px;
+    height: 50px;
+    padding: 10px 55px;
+    gap: 10px;
+    border-radius: 10px;
+    opacity: 0.8;
+    background-color: #b88e2f;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    &:disabled {
+      background-color: #d3d3d3;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+
+  .login-info {
+    color: #333;
+    margin-top: 15px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    text-align: center;
+
+    .login-link {
+      color: #b88e2f;
+      text-decoration: none;
+      font-weight: 500;
+      transition: text-decoration 0.3s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:disabled {
+        color: #acacac;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .create-account-btn,
+  .submit-button,
+  .lgn-btn {
+    padding: 10px 55px;
+    border-radius: 10px;
+    opacity: 0.8;
+    background-color: #b88e2f;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 20px auto 0;
+
+    &:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    &:disabled {
+      background-color: #d3d3d3;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    &.disabled {
+      background-color: #d3d3d3;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  .submit-button {
+    width: 235px;
+    height: 52px;
+    margin-left: 0;
+  }
+  .create-account-btn {
+    width: 269px;
+    height: 50px;
+  }
+  .billing-btn {
+    width: 250px;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #acacac;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 20px 0 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: #b88e2f;
+      background-color: #b88e2f;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    &:disabled {
+      background-color: #d3d3d3;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+
+  label {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    select {
+      width: 100%;
+      padding: 18px 20px;
+      border-radius: 15px;
+      border: 1px solid #acacac;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      background-color: #fff;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: #b88e2f;
+        outline: none;
+      }
+
+      option:disabled {
+        color: #acacac;
+      }
+    }
+  }
+
+  .input-field,
+  .input-about {
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: 15px;
+    border: 1px solid #acacac;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s;
+
+    &::placeholder {
+      color: #acacac;
+    }
+
+    &:focus {
+      border-color: #b88e2f;
+      outline: none;
+    }
+
+    &:disabled {
+      background-color: #f0f0f0;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+
+  .input-field {
+    margin-bottom: 20px;
+  }
+
+  .input-about {
+    height: 220px;
+    resize: none;
+  }
+
+  .billing-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .name-fields {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+
+      .input-field {
+        height: 60px;
+      }
+    }
+
+    .input-field {
+      height: 60px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 15px;
+
+    .input-field,
+    .input-about {
+      font-size: 15px;
+      padding: 15px;
+    }
+
+    .input-about {
+      height: 180px;
+    }
+
+    .signup-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .create-account-btn,
+    .additional-info-btn,
+    .login-btn {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 10px;
+
+    label {
+      font-size: 14px;
+    }
+
+    .input-field,
+    .input-about {
+      font-size: 14px;
+      padding: 12px;
+    }
+
+    .input-about {
+      height: 150px;
+    }
+
+    .signup-buttons {
+      gap: 5px;
+    }
+
+    .create-account-btn,
+    .login-btn {
+      width: 100%;
+    }
+  }
+}

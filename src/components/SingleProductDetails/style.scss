@@ -1,0 +1,218 @@
+@import "../../styles/styles.scss";
+
+.product-details {
+  margin: 100px auto;
+  max-width: 1214px;
+  width: 90%;
+  display: flex;
+  gap: clamp(10px, 4vw, 40px);
+
+  .product-images {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex: 1 1 50%;
+    gap: clamp(10px, 2vw, 20px);
+
+    .product-images-main-wrapper {
+      max-height: 500px;
+      flex: 1 1 90%;
+      overflow: hidden;
+
+      .product-images-main {
+        object-position: center;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .product-small-images-container {
+      flex: 1 1 15%;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(10px, 2vw, 20px);
+      .product-small-image-wrapper {
+        width: 100%;
+        max-width: 76px;
+        overflow: hidden;
+        .product-small-image {
+          width: 100%;
+          height: clamp(30px, 14vh, 86px);
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .product-content {
+    flex: 1 1 50%;
+    min-width: 100px;
+    margin: 0 auto;
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: $text-primary;
+      display: flex;
+    }
+
+    .product-price {
+      font-size: 24px;
+      color: $text-secondary;
+      margin-bottom: 10px;
+      display: flex;
+      padding: 7px;
+    }
+
+    .reviews {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+
+      .star-rating {
+        margin-right: 10px;
+      }
+      .bracket {
+        padding-block: 20px;
+        padding-left: 20px;
+        border-left: 1px solid gray;
+      }
+
+      .customer-review {
+        color: $text-secondary;
+      }
+    }
+
+    .description {
+      margin: 20px 0;
+      font-size: 16px;
+      line-height: 1.5;
+      color: $text-primary;
+      text-align: left;
+      max-width: 52ch;
+    }
+
+    .color-label {
+      font-size: 14px;
+      color: $text-secondary;
+      margin-bottom: 5px;
+      display: flex;
+    }
+
+    .color-options {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      .color-option {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid $text-secondary;
+        transition: border-color 0.3s ease;
+
+        &:hover {
+          border-color: $text-primary;
+        }
+      }
+    }
+
+    .quantity-add-to-cart,
+    .compare {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .quantity-control {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 2px solid $text-secondary;
+        padding: 5px;
+        border-radius: 10px;
+
+        button {
+          width: 20%;
+          height: 30px;
+          background-color: $text-third;
+          font-size: 16px;
+
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: $text-third;
+          }
+        }
+
+        span {
+          font-size: 16px;
+
+          font-weight: bold;
+          color: $text-primary;
+        }
+      }
+
+      .add-to-cart,
+      .compare {
+        padding: 13px 20px;
+        border: 1px solid $text-primary;
+        background-color: $text-third;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: $text-primary;
+          color: $text-third;
+        }
+      }
+    }
+    .product-meta {
+      p {
+        font-size: 0.9rem;
+        color: $text-secondary;
+        display: flex;
+        padding: 10px 0px;
+
+        strong {
+          color: $text-primary;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      gap: 0.5rem;
+
+      span {
+        color: $text-primary;
+      }
+
+      a {
+        color: $clr-teal;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: $clr-coral;
+        }
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .product-images {
+      flex-direction: column;
+      align-items: center;
+
+      .product-small-images-container {
+        flex-direction: row;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .product-details {
+    flex-wrap: wrap-reverse;
+  }
+}

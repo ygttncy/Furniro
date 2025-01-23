@@ -1,0 +1,209 @@
+@import "../../styles/styles.scss";
+
+.product-summary {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1127px;
+  min-height: 1608px;
+  margin: 178px auto 203px auto;
+  font-family: $fnt-poppins;
+  color: $text-primary;
+
+  .billing-details {
+    flex: 1;
+    max-width: 454px;
+    min-height: 1608px;
+  }
+
+  .product-detail {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 529px;
+    gap: 31px;
+
+    .order-summary {
+      max-width: 475px;
+      min-height: 171px;
+      gap: 19px;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: clamp(20px, 2vw, 24px);
+        font-weight: 500;
+        line-height: 36px;
+        color: $text-primary;
+      }
+
+      .detail-item,
+      .detail-header,
+      .subtotal,
+      .total {
+        display: flex;
+        justify-content: space-between;
+        font-size: clamp(14px, 1.5vw, 16px);
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      .product-name {
+        color: $text-secondary;
+
+        .product-amount {
+          color: $text-primary;
+        }
+      }
+
+      .total-price {
+        color: $clr-gold;
+        font-size: clamp(20px, 3vw, 24px);
+        font-weight: 700;
+        line-height: 36px;
+      }
+    }
+
+    .payment-div {
+      gap: 11px;
+      display: flex;
+      flex-wrap: wrap;
+      border-top: 1px solid $clr-light-cream;
+
+      .selected-payment-container {
+        align-items: center;
+        display: flex;
+
+        .hidden-radio {
+          display: none;
+        }
+
+        .selected-payment {
+          position: relative;
+          color: $text-primary;
+          font-size: clamp(14px, 1.5vw, 16px);
+          font-weight: 400;
+          line-height: 24px;
+
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            margin-right: 15px;
+            border: 1px solid $text-primary;
+            background-color: $text-primary;
+          }
+        }
+      }
+
+      .payment-note {
+        font-size: clamp(14px, 1.5vw, 16px);
+        font-weight: 300;
+        line-height: 24px;
+        color: $text-secondary;
+      }
+    }
+
+    .payment-methods {
+      display: flex;
+      gap: 31px;
+      color: $text-secondary;
+      font-size: clamp(14px, 1.5vw, 16px);
+      font-weight: 500;
+      line-height: 24px;
+
+      label {
+        cursor: pointer;
+        color: $text-secondary;
+        font-size: clamp(14px, 1.5vw, 16px);
+        font-weight: 500;
+        line-height: 24px;
+
+        input[type="radio"] {
+          margin-right: 15px;
+          border: 1px solid $text-secondary;
+          width: 14px;
+          height: 14px;
+          border-radius: 100%;
+        }
+      }
+    }
+
+    .privacy-note {
+      font-size: clamp(14px, 1.5vw, 16px);
+      font-weight: 300;
+      line-height: 24px;
+
+      .highlight {
+        font-weight: 600;
+      }
+    }
+
+    .place-order {
+      cursor: pointer;
+      max-width: 318px;
+      min-height: 64px;
+      border-radius: 15px;
+      border: 1px solid $text-primary;
+      font-size: clamp(18px, 2vw, 20px);
+      font-weight: 400;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .product-summary {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .product-summary {
+    .product-detail {
+      padding-left: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-summary {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 150px;
+    padding: 30px;
+
+    .billing-details {
+      margin: auto;
+    }
+
+    .product-detail {
+      margin: auto;
+      padding: 0px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .product-summary {
+    .product-detail {
+      .place-order {
+        cursor: pointer;
+        max-width: 200px;
+        min-height: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .product-summary {
+    .product-detail {
+      .place-order {
+        cursor: pointer;
+        max-width: 150px;
+      }
+    }
+  }
+}

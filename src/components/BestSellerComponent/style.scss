@@ -1,0 +1,135 @@
+.best-seller {
+  max-width: 273px;
+  color: #3a3a3a;
+  width: 100%;
+  h2 {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+  }
+
+  .clothes {
+    width: 100%;
+    max-width: 273px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    a {
+      max-width: 273px;
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+
+      .product {
+        width: 100%;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border-radius: 5px;
+
+        .product-image {
+          width: 75px;
+          height: 75px;
+        }
+
+        .product-info {
+          h3 {
+            font-size: 16px;
+            margin: 0;
+          }
+
+          .price-info {
+            .current-price {
+              font-size: 14px;
+              color: #333;
+            }
+
+            .original-price {
+              font-size: 12px;
+              color: #999;
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+
+//   @media (max-width: 1350px) {
+//     display: none;
+//   }
+
+//   @media (min-width: 601px) and (max-width: 1024px) {
+//     width: 80%;
+//     padding: 15px;
+
+//     .clothes {
+//       a {
+//         max-width: 273px;
+//       }
+
+//       .product {
+//         .product-image {
+//           width: 80px;
+//           height: 80px;
+//         }
+
+//         .product-info {
+//           h3 {
+//             font-size: 15px;
+//           }
+
+//           .price-info {
+//             .current-price {
+//               font-size: 13px;
+//             }
+
+//             .original-price {
+//               font-size: 11px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   @media (min-width: 1025px) {
+//     width: 320px;
+
+//     .clothes {
+//       a {
+//         max-width: 273px;
+//       }
+
+//       .product {
+//         .product-image {
+//           width: 75px;
+//           height: 75px;
+//         }
+
+//         .product-info {
+//           h3 {
+//             font-size: 17px;
+//           }
+
+//           .price-info {
+//             .current-price {
+//               font-size: 15px;
+//             }
+
+//             .original-price {
+//               font-size: 13px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

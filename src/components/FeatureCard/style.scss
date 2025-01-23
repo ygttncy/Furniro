@@ -1,0 +1,32 @@
+@import "../../styles/abstracts/variables";
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    color: $text-primary;
+    font-weight: bold;
+    display: flex;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: $text-secondary;
+    display: flex;
+    padding: 5px 0;
+  }
+}

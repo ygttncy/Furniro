@@ -1,0 +1,43 @@
+.non-product-text{
+    text-align: center;
+}
+.cart-page-design-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .cart-page-design-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 560px;
+
+
+        .cart-page-design-section-img {
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .cart-page-design-section-info {
+            display: flex;
+            max-width: 420px;
+            gap: 89px;
+
+            .delete-btn {
+                cursor: pointer;
+            }
+
+            .cart-page-design-section-name {
+                font-size: 16px;
+                font-weight: 400;
+                color: #ACACAC;
+            }
+
+            .cart-page-design-section-price {
+                font-size: 16px;
+                font-weight: 400;
+                color: #3A3A3A;
+            }
+        }
+    }
+}

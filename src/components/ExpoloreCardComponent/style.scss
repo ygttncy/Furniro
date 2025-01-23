@@ -1,0 +1,178 @@
+.explore-card-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.products-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .info-container {
+    position: absolute;
+    bottom: -10px;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    @media (max-width: 1670px) {
+      left: 42%;
+    }
+    @media (max-width: 1242px) {
+      left: 48%;
+      bottom: -30px;
+    }
+    @media (max-width: 988px) {
+      left: 44%;
+      bottom: -20px;
+    }
+    @media (max-width: 898px) {
+      left: 48%;
+    }
+    @media (max-width: 440px) {
+      bottom: -12px;
+    }
+  }
+
+  .info-section {
+    width: 217px;
+    height: 130px;
+    background-color: rgba(241, 241, 241, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    @media (max-width: 1242px) {
+      width: 172px;
+      height: 110px;
+    }
+    @media (max-width: 988px) {
+      width: 126px;
+      height: 80px;
+    }
+    @media (max-width: 574px) {
+      width: 95px;
+      height: 60px;
+    }
+    @media (max-width: 440px) {
+      width: 65px;
+      height: 46px;
+    }
+  }
+
+  .redirect-button {
+    position: relative;
+    top: 40px;
+    width: 48px;
+    height: 48px;
+    background-color: #b88e2f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @media (max-width: 1242px) {
+      top: 38px;
+      width: 36px;
+      height: 36px;
+    }
+    @media (max-width: 988px) {
+      top: 28px;
+      width: 24px;
+      height: 24px;
+    }
+    @media (max-width: 574px) {
+      top: 20px;
+      width: 20px;
+      height: 20px;
+    }
+    @media (max-width: 440px) {
+      top: 14px;
+    }
+    img {
+      @media (max-width: 574px) {
+        width: 16px;
+      }
+    }
+  }
+
+  .info-top h6 {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #acacac;
+    margin: 0 5px;
+  }
+
+  .vector-divider {
+    width: 27px;
+    height: auto;
+    @media (max-width: 988px) {
+      width: 16px;
+    }
+    @media (max-width: 574px) {
+      width: 8px;
+    }
+    @media (max-width: 440px) {
+      width: 4px;
+    }
+  }
+
+  span {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #acacac;
+    margin: 0 8px;
+    @media (max-width: 988px) {
+      font-size: 12px;
+      margin: 0 4px;
+    }
+    @media (max-width: 574px) {
+      font-size: 10px;
+      margin: 0 2px;
+    }
+    @media (max-width: 440px) {
+      font-size: 8px;
+      margin: 0;
+    }
+  }
+
+  .info-bottom {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.6px;
+    white-space: nowrap;
+    text-align: center;
+    @media (max-width: 1242px) {
+      font-size: 22px;
+    }
+    @media (max-width: 988px) {
+      font-size: 16px;
+    }
+    @media (max-width: 574px) {
+      font-size: 12px;
+      line-height: 24px;
+    }
+    @media (max-width: 440px) {
+      font-size: 8px;
+      line-height: 12px;
+    }
+  }
+}

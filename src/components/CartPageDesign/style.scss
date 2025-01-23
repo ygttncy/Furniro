@@ -1,0 +1,16 @@
+.cart-page-design {
+  // border: 2px solid magenta;
+  max-width: 1440px;
+  margin: 75px auto;
+  font-family: "Poppins", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  .cart-page-design-main {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

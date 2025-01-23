@@ -1,0 +1,10 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 98px;
+  .billing-form,
+  .contact-page {
+    flex: 1;
+  }
+}
